@@ -1,0 +1,74 @@
+<div class="content col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div class="row">
+    <div class="col-lg-4 checkout">
+      <form (ngSubmit)="onSubmit()" #checkoutForm="ngForm">
+        <div class="form-group">
+          <label for="role">Client Role</label>
+          <mat-select class="form-control" placeholder="Select" [(value)]="selectedClient">
+            <mat-option value="guest">Guest</mat-option>
+          </mat-select>
+        </div>
+        <div class="form-group">
+          <label for="role">Checkout Note</label>
+          <textarea class="form-control" matInput placeholder="Checkout note here"></textarea>
+        </div>
+        <div class="row title">
+          <div class="col-lg-3">
+            <p>Product</p>
+          </div>
+          <div class="col-lg-3">
+            <p>Price</p>
+          </div>
+          <div class="col-lg-3">
+            <p>Quantity</p>
+          </div>
+          <div class="col-lg-3">
+            <p>Subtotal</p>
+          </div>
+        </div>
+        <div class="row detail-list" [ngStyle]="{'overflow-y': checkout_products_list.length >= 13 ? 'scroll' : 'unset'}">
+          <div class="detail" *ngFor="let product of checkout_products_list">
+            <div class="col-lg-3">
+              <p class="badge badge-custom">{{product.name}}</p>
+              <input name="product_name[]" type="hidden">
+            </div>
+            <div class="col-lg-3">
+              <p>${{product.price}}</p>
+              <input name="product_price[]" type="hidden">
+            </div>
+            <div class="col-lg-3">
+              <input class="form-control" type="number" matInput value="{{product.quantity}}" name="product_quantity[]">
+            </div>
+            <div class="col-lg-3">
+              <p>${{product.price * product.quantity}}</p>
+              <input name="product_total[]" type="hidden">
+            </div>
+          </div>
+        </div>
+        <div class="row status text-center">
+          <div class="col-lg-6">
+            <p>Total items<br/>
+              {{checkout_products_list.length}}
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p>Total<br/>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-lg-8 products">
+      <div class="row">
+        <div class="card text-center" *ngFor="let product of products.result" (click)="addProduct(product)">
+          <img src="/assets/images/{{product.image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text badge badge-success">${{product.price}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

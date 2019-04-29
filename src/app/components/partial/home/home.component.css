@@ -1,0 +1,84 @@
+.checkout{
+  padding: 15px;
+  background-color: rgba(245, 245, 245, 0.5);
+}
+
+.checkout .row{
+  margin: 10px 0;
+}
+
+.checkout textarea{
+  width: 100%;
+}
+
+.checkout .title p{
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.checkout .title,
+.checkout .detail{
+  text-align: center;
+}
+
+.checkout input[type="number"]{
+  width: 100%;
+  text-align: right;
+  padding: 0;
+  height: initial;
+  line-height: 1;
+}
+
+.title{
+  background-color: rgba(255,79,79, 0.5);
+  margin: 0;
+}
+
+.products{
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.products img{
+  width: 100%;
+}
+
+.card{
+  width: 10rem;
+  float: left;
+  margin: 0 21px 3rem;
+}
+
+@media (max-width: 1440px){
+  .card{
+    margin: 0 12px 3rem;
+  }
+}
+
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.1) translate(7px, 7px);
+}
+
+.card-body{
+  padding: 1rem;
+}
+
+.badge-custom{
+  background-color: #ffa02d;
+}
+
+.detail-list{
+  overflow-y: scroll;
+  max-height: 500px;
+  min-height: 500px;
+}
+
+.detail{
+  width: 100%;
+  display: flex;
+}
+
+.detail .badge{
+  font-size: 100%;
+}

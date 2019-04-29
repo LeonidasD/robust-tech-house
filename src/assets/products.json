@@ -1,0 +1,96 @@
+{
+  "message": "OK",
+  "result":[
+  {
+    "id": "abcd1234",
+    "name": "Chicken",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 100
+  },
+  {
+    "id": "abcd12345",
+    "name": "Chicken 2",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 120
+  },
+  {
+    "id": "abcd12346",
+    "name": "Chicken 3",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 130
+  },
+  {
+    "id": "abcd12347",
+    "name": "Chicken 4",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 140
+  },
+  {
+    "id": "abcd12348",
+    "name": "Chicken 5",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 10
+  },
+  {
+    "id": "abcd12348",
+    "name": "Chicken 5",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 10
+  },
+  {
+    "id": "abcd12348",
+    "name": "Chicken 5",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 10
+  },
+  {
+    "id": "abcd12348",
+    "name": "Chicken 5",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 10
+  },
+  {
+    "id": "abcd12348",
+    "name": "Chicken 5",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 10
+  },
+  {
+    "id": "abcd12348",
+    "name": "Chicken 5",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 10
+  },
+  {
+    "id": "abcd12348",
+    "name": "Chicken 5",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 10
+  },
+  {
+    "id": "abcd12348",
+    "name": "Chicken 5",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 10
+  },
+  {
+    "id": "abcd12349",
+    "name": "Chicken 6",
+    "price": 72,
+    "image": "chicken.jpg",
+    "quantity": 5
+  }
+  ]
+}
