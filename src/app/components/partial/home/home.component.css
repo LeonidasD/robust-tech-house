@@ -1,6 +1,7 @@
 .checkout{
   padding: 15px;
-  background-color: rgba(245, 245, 245, 0.5);
+  margin-bottom: 15px;
+  background-color: rgba(236, 240, 245, 0.5);
 }
 
 .checkout .row{
@@ -35,7 +36,7 @@
 }
 
 .products{
-  height: 500px;
+  height: 50%;
   overflow-y: scroll;
 }
 
@@ -81,4 +82,23 @@
 
 .detail .badge{
   font-size: 100%;
+}
+
+.status p{
+  display: inline;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.blue-bg{
+  background-color: rgb(217, 237, 247);
+}
+
+.btn-cancel-custom{
+  background-color: rgb(221, 75, 57);
+  color: #fff;
+}
+
+.btn-print-bill-custom{
+  background-color: rgb(96, 92, 168);
+  color: #fff;
 }

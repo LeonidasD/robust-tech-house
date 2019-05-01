@@ -1,0 +1,15 @@
+.navbar-nav{
+  margin-left: auto;
+}
+
+.dropdown-menu.show{
+  right: 5px;
+  left: unset;
+}
+
+.h-nav{
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+  background-color: #e3f2fd;
+}

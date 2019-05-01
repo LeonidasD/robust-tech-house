@@ -1,0 +1,9 @@
+table, .mat-paginator{
+  width: 100%;
+}
+
+.detail{
+  color: #07C;
+  text-decoration: underline;
+  cursor: pointer;
+}

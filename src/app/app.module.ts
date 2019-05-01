@@ -5,8 +5,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatSelectModule } from '@angular/material';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatSelectModule, MatTableModule, MatPaginatorModule, MatDialogModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+
 
 
 import { LoginComponent } from './components/partial/login/login.component';
@@ -14,6 +16,15 @@ import { HNavComponent } from './components/fixed/h-nav/h-nav.component';
 import { ErrorComponent } from './components/fixed/error/error.component';
 import { HomeComponent } from './components/partial/home/home.component';
 import { VNavComponent } from './components/fixed/v-nav/v-nav.component';
+import { HistoryComponent } from './components/partial/order/history/history.component';
+
+// used to create fake backend
+import { fakeBackendProvider } from './helpers/fake-backend';
+import { JwtInterceptor } from './helpers/jwt.interceptor';
+import { ErrorInterceptor } from './helpers/error.interceptor';
+import { DetailsComponent } from './components/partial/order/details/details.component';
+import { IncomeComponent } from './components/partial/income/income.component';
+
 
 
 @NgModule({
@@ -24,11 +35,15 @@ import { VNavComponent } from './components/fixed/v-nav/v-nav.component';
     ErrorComponent,
     HomeComponent,
     VNavComponent,
+    HistoryComponent,
+    DetailsComponent,
+    IncomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    RouterModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
@@ -36,9 +51,21 @@ import { VNavComponent } from './components/fixed/v-nav/v-nav.component';
     MatIconModule,
     MatListModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  providers: [],
+  entryComponents: [ DetailsComponent ],
+  exports: [ DetailsComponent ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    DatePipe,
+    // provider used to create fake backend
+    fakeBackendProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
